@@ -1,0 +1,13 @@
+.button {
+    width: 15rem;
+    &:disabled {
+        background-color: #ccc;
+    }
+}
+.container {
+    padding: 20px;
+    text-align: center;
+}
+.pagination {
+    margin-top: 20px;
+}
