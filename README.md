@@ -56,6 +56,15 @@ The project uses **Babel** and **TypeScript** (ts.config) configuration to ensur
 
 ## Pagination Note
 In the task requirements, it's specified to show 10 items per page, but I decided not to implement pagination on the frontend. Instead, I opted to display the full set of data from the API to demonstrate the full scope of the task and utilize all the tools. The API itself provides a set of 20 items by default, but the absence of a `take` parameter makes it challenging to control the number of items returned directly.
+
+## Movie Details Handling
+The application handles movie details dynamically to provide an efficient and seamless user experience:
+
+- Using List Data:
+When a user clicks on a movie, the application first checks if the necessary information is already available in the movie list fetched from the API. If the data exists, it is displayed immediately without making an additional API call.
+
+- Fallback to API Request:
+If the information for the selected movie is not available in the list (e.g., if accessed directly via a link), the application makes a separate API request to fetch the movie details. This ensures that every movie can be accessed directly via its unique URL without requiring prior navigation through the movie list.
   
 # How to Run the Application:
 
