@@ -1,1 +1,1 @@
-export * from "./dates.helper";
+export * from "./fetch-movies.helper";

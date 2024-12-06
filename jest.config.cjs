@@ -1,14 +1,15 @@
 module.exports = {
+    testEnvironment: "jsdom",
     preset: 'ts-jest',
-    testEnvironment: 'jest-environment-jsdom',
     setupFilesAfterEnv: [
         '<rootDir>/src/setupTests.ts'
     ],
     transform: {
-        '^.+\\.tsx?$': 'ts-jest',
-        '^.+\\.css$': 'jest-transform-css',
+        '^.+\\.(js|jsx|ts|tsx)$': 'babel-jest',
     },
+    moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],
     moduleNameMapper: {
-        '\\.css$': 'identity-obj-proxy',
+        "\\.scss$": "identity-obj-proxy",
+        "\\.png$": "<rootDir>/src/__mocks__/fileMock.js",
     },
 };

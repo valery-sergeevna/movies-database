@@ -1,8 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import birthdaySlice from "../slices/birthday-slice";
+import moviesSlice from "../slices/movies.slice";
+import movieDetailsSlice from "../slices/movie-details.slice";
 
 export const rootReducer = {
-    birthdays: birthdaySlice,
+    movies: moviesSlice,
+    movieDetails: movieDetailsSlice,
 };
 
 export const store = configureStore({
@@ -10,3 +12,4 @@ export const store = configureStore({
 });
 
 export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;

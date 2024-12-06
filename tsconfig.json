@@ -7,13 +7,23 @@
   "compilerOptions": {
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "moduleResolution": "node",
     "strict": true,
     "skipLibCheck": true,
     "jsx": "react-jsx",
-    "types": ["jest"],
+    "types": ["node", "jest", "vite/client"],
     "lib": ["es2017", "dom"],
-    "target": "es2017"
+    "module": "es2022",
+    "moduleResolution": "Node",
+    "outDir": "./dist",
+    "resolveJsonModule": true,
+    "composite": true,
+    "declaration": true,
+    "declarationDir": "./dist/types"
   },
-  "include": ["src", "declaration.d.ts"]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "vite-env.d.ts",
+    "declaration.d.ts"
+  ]
 }

@@ -1,0 +1,6 @@
+.movies-list {
+    justify-content: center;
+    &__pagination {
+        margin-top: var(--margin-prop);
+    }
+}

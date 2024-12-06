@@ -1,24 +1,41 @@
-export interface BirthdayItemType {
-    text: string;
-    year: number;
-    pages: { title: string; timestamp: string }[];
+export enum StatusRequest {
+    IDLE = "IDLE",
+    PENDING = "pending",
+    FULFILLED = "fulfilled",
+    REJECTED = "REJECTED",
+}
+export interface MovieItemType {
+    id: number;
+    title: string;
+    poster_path: string;
+    vote_average: number;
+    release_date: string;
+    vote_count: number;
+    backdrop_path?: string;
+    overview?: string;
+    original_language?: string;
 }
 
-export interface BirthdayItemProps {
-    birth: BirthdayItemType;
-}
-
-export interface BirthdayState {
-    data: BirthdayItemType[];
+export interface MovieState {
+    data: MovieItemType[];
     totalPages: number;
+    totalResults: number;
     currentPage: number;
-    loading: boolean;
+    status: StatusRequest;
+    error: string | null;
+    query: string;
+}
+
+export interface MovieDetailsState {
+    data: MovieItemType | null;
+    status: StatusRequest;
     error: string | null;
 }
 
-export interface ErrorModalProps {
-    error: string | null;
-    open: boolean;
-    onRetry: () => void;
-    onCancel: () => void;
+export interface MovieItemProps {
+    movie: MovieItemType;
 }
+
+export type TestRootState = {
+    movies: MovieState;
+};

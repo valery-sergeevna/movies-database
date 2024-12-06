@@ -1,0 +1,38 @@
+.movie-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    &:hover {
+        opacity: 0.8;
+    }
+    //override styles from UI library
+    &__img {
+        border-radius: var(--border-radius);
+        min-height: 260px;
+        &.MuiCardMedia-root {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    &__title {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        &.MuiTypography-root {
+            font-size: var(--font-size-title);
+        }
+    }
+    &__details {
+        &.MuiTypography-root {
+            font-size: var(--font-size-text);
+        }
+    }
+    &__content {
+        width: 100%;
+    }
+    &__link {
+        text-decoration: unset;
+    }
+}

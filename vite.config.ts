@@ -2,19 +2,22 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  plugins: [react()],
-  resolve: {
-    alias: {
-      '@': '/src',
+    plugins: [react()],
+    define: {
+        'process.env': {}
     },
-  },
-  server: {
-    proxy: {
-      "/api": {
-        target: "https://api.wikimedia.org",
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ""),
-      },
+    resolve: {
+        alias: {
+          '@': '/src',
+        },
     },
-  },
+    server: {
+        proxy: {
+            "/api": {
+              target: "https://api.themoviedb.org/3",
+              changeOrigin: true,
+              rewrite: (path) => path.replace(/^\/api/, ""),
+            },
+        },
+    },
 });

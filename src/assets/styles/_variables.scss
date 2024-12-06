@@ -1,0 +1,15 @@
+$font-size: 16px;
+$border-radius: 8px;
+$font-size-title: 0.9rem;
+$font-size-text: 0.7rem;
+$error-color: red;
+$margin-prop: 2rem;
+
+:root {
+  --font-size: #{$font-size};
+  --border-radius: #{$border-radius};
+  --font-size-title: #{$font-size-title};
+  --font-size-text: #{$font-size-text};
+  --error-color: #{$error-color};
+  --margin-prop: #{$margin-prop};
+}

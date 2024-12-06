@@ -1,2 +1,2 @@
-export * from "./birthday-slice";
-export * from "./birthday-selectors";
+export * from "./movies.slice";
+export * from "./movie-details.slice";

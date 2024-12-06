@@ -1,0 +1,30 @@
+.movie-details {
+    padding: 1rem;
+    &__error {
+        text-align: center;
+        color: var(--error-color);
+    }
+    &__overview {
+        font-size: var(--font-size-title);
+    }
+    &__poster {
+        object-fit: contain;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    &__wrapper {
+        width: 100%;
+        margin: var(--margin-prop) 0;
+        max-width: 30rem;
+    }
+
+    //override styles from UI library
+    &__rating,
+    &__date,
+    &__language{
+        &.MuiTypography-root {
+            font-size: var(--font-size-title);
+            margin-top: 0.5rem;
+        }
+    }
+}

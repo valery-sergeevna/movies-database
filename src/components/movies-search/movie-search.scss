@@ -1,0 +1,16 @@
+.movie-search {
+    &__wrapper {
+      width: 100%;
+      margin: var(--margin-prop) 0;
+    }
+
+    &__input {
+      width: 100%;
+    }
+
+    &__results {
+      color: #666;
+      text-align: right;
+      margin-bottom: var(--margin-prop);
+    }
+}

@@ -1,15 +1,14 @@
-import { HomePage } from "./pages";
+import { MovieDetailsPage, MoviesPage } from "./pages";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { memo } from "react";
+import "./assets/styles/main.scss";
 function App() {
     return (
         <Router>
             <Routes>
-                <Route path='/' element={<HomePage />} />
+                <Route path='/' element={<MoviesPage />} />
+                <Route path='/:movieId' element={<MovieDetailsPage />} />
             </Routes>
         </Router>
     );
 }
-const _App = memo(App);
-
-export { _App as App };
+export { App };
