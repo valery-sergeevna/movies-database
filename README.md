@@ -77,7 +77,7 @@ npm install
 ### 3. Set up environment variables
 Create a .env file in the root directory of the project and add your TMDb API key:
 ```
-REACT_APP_TMDB_API_KEY=your_tmdb_api_key_here
+VITE_API_TOKEN=your_tmdb_api_key_here
 ```
 ### 4. Run the application
 To start the development server, run:
