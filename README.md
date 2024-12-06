@@ -50,6 +50,10 @@ All tests passed successfully:
 - **Test Suites**: 5 total
 - **Tests**: 21 total
 
+## Configuration
+
+The project uses **Babel** and **TypeScript** (ts.config) configuration to ensure that the code is properly transpiled and that meta types (env) are correctly transformed during the build process and testing. 
+
 ## Pagination Note
 In the task requirements, it's specified to show 10 items per page, but I decided not to implement pagination on the frontend. Instead, I opted to display the full set of data from the API to demonstrate the full scope of the task and utilize all the tools. The API itself provides a set of 20 items by default, but the absence of a `take` parameter makes it challenging to control the number of items returned directly.
   
